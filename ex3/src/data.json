@@ -1,0 +1,111 @@
+{
+    "items": [
+      {
+        "id": 1,
+        "name": "Roku Express 4K+ 2021 | Streaming Media Player HD/4K/HDR with Smooth Wireless Streaming and Roku Voice Remote with TV Controls, Includes Premium HDMI Cable",
+        "seller": "Seagate",
+      
+        "original_price": 62.99,
+        "promotion_price":0,
+        "shipping":33.58,
+        "rating": 4.5,
+        "image": "2.png"
+        
+      },
+      {
+        "id": 2,
+        "name": "Seagate Portable 2TB External Hard Drive Portable HDD – USB 3.0 for PC",
+        "seller": "Richard Powers",
+       
+        "original_price": 139.99,
+        "promotion_price":129.99,
+        "shipping":33.70,
+        "rating": 4.5,
+        "image": "1.png"
+        
+      },{
+        "id": 3,
+        "name": "WD 2TB Elements Portable External Hard Drive HDD, USB 3.0, Compatible with PC, Mac, PS4 & Xbox - WDBU6Y0020BBK-WESN",
+        "seller": "Western Digital Store",
+        "original_price": 239.99,
+        "promotion_price":229.99,
+        "shipping":33.70,
+        "rating": 4.5,
+        "image": "4.png"
+        
+      }
+      ,{
+        "id": 4,
+        "name": "Logitech MK270 Wireless Keyboard and Mouse Combo - Keyboard and Mouse Included, Long Battery Life",
+        "seller": "Logitech Store",
+        "original_price": 339.99,
+        "promotion_price":329.99,
+        "shipping":33.70,
+        "rating": 4.5,
+        "image": "5.png"
+        
+      },
+      {
+        "id": 5,
+        "name": "HP VH240a 23.8-Inch Full HD 1080p IPS LED Monitor with Built-In Speakers and VESA Mounting, Rotating Portrait & Landscape, Tilt, and HDMI & VGA Ports (1KL30AA) - Black",
+        "seller": "HP Store",
+        "original_price": 439.99,
+        "promotion_price":429.99,
+        "shipping":33.70,
+        "rating": 4.5,
+        "image": "6.png"
+        
+      }
+      ,
+      {
+        "id": 6,
+        "name": "Acer Aspire 5 A515-46-R14K Slim Laptop | 15.6' Full HD IPS | AMD Ryzen 3 3350U Quad-Core Mobile Processor | 4GB DDR4 | 128GB NVMe SSD | WiFi 6 | Backlit KB | Amazon Alexa | Windows 10 Home (S mode)",
+        "seller": "Acer Store",
+        "original_price": 539.99,
+        "promotion_price":529.99,
+        "shipping":33.70,
+        "rating": 4.5,
+        "image": "7.png"
+        
+      },
+      {
+        "id": 7,
+        "name": "Logitech BRIO Ultra HD Webcam for Video Conferencing, Recording, and Streaming - Black",
+        "seller": "Logitech Store",
+        "original_price": 639.99,
+        "promotion_price":629.99,
+        "shipping":33.70,
+        "rating": 4.5,
+        "image": "8.png"
+        
+      }
+      ,
+      {
+        "id": 8,
+        "name": "iPhone Charger, TAKAGI Lightning Cable 3PACK 6FT Nylon Braided USB Charging Cable High Speed Data Sync Transfer Cord Compatible with iPhone 13/12/11 Pro Max/XS MAX/XR/XS/X/8/7/Plus/6S/6/SE/5S/iPad",
+        "seller": "TAKAGI",
+        "original_price": 739.99,
+        "promotion_price":729.99,
+        "shipping":33.70,
+        "rating": 4.5,
+        "image": "9.png"
+        
+      }
+      ,
+      {
+        "id": 9,
+        "name": "Logitech MK345 Wireless Combo Full-Sized Keyboard with Palm Rest and Comfortable Right-Handed Mouse - Black",
+        "seller": "Logitech Store",
+        "original_price": 839.99,
+        "promotion_price":829.99,
+        "shipping":33.70,
+        "rating": 4.5,
+        "image": "10.png"
+        
+      }
+
+      
+
+
+]
+}

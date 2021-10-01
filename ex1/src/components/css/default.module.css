@@ -1,0 +1,27 @@
+.container{
+    width: 100%;
+}
+
+.body{
+    
+    background-color: #F1F2F4;
+    min-height: 100vh;
+    
+    
+}
+.content{
+    margin-left:25%;
+    margin-right:20%;
+    display:flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+   
+}
+.mainsection{
+    width: 65%;
+}
+
+.menusection{
+    width: 30%;
+    margin-left: 5%;
+}

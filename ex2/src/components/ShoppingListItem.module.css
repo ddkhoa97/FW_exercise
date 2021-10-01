@@ -1,0 +1,16 @@
+.item {
+  background-color: pink;
+  margin-bottom: 5px;
+}
+
+.item > div {
+  margin-left: 20px;
+}
+
+.flex {
+  display: flex;
+}
+
+.itemQtyUnit {
+  width: 30px;
+}

@@ -1,0 +1,26 @@
+ .container div{
+    cursor: pointer;
+    margin-right: 20px;
+    color: grey;
+
+}
+.yle{
+    background-color: white;
+    color: black !important;
+    padding: 5px;
+}
+.container{
+    display:flex;
+   
+   margin: 5px ;
+   align-items: center;
+}
+
+.container div:hover{
+    color:white;
+}
+
+.container div:active {
+    color:#00b4c8;
+    text-decoration: underline;
+}

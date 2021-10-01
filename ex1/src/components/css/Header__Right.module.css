@@ -1,0 +1,17 @@
+.container div{
+    cursor: pointer;
+   
+    color: rgb(211, 210, 210);
+    border-left: 1px solid;
+    border-right: 1px solid;
+    height: 100%; 
+    padding: 0px 20px;
+   
+}
+
+.container{
+    display:flex;
+  
+   align-items: baseline;
+   justify-content: center;
+}
