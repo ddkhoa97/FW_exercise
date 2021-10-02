@@ -167,7 +167,7 @@ app.post('/users/add-new', (req, res) => {
 // CREATE INVOICES
 
 app.post('/check-out', (req, res) => {
-  if(req.body.user_id == undefined || req.body.product_id == undefined || req.body.qty == undefined || req.body.price == undefined || req.body.total== undefined)
+  if(req.body.user_id == undefined || req.body.product_id == undefined || req.body.qty == undefined || req.body.price == undefined )
   {
     console.log("Input again, lack of information")
     res.send("Input again, lack of information");
@@ -180,7 +180,7 @@ app.post('/check-out', (req, res) => {
       {"product_id":req.body.product_id,
       "qty":req.body.qty,
       "price":req.body.price,
-      "total":req.body.total}
+      "total":req.body.qty*req.body.price}
       ]    
     }
     data_invoices.invoices[data_invoices.invoices.length]=new_invoice;

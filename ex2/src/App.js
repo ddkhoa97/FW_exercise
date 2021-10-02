@@ -26,96 +26,36 @@ class App extends React.Component {
   };
 
  
-
- 
-  addSomeCarrots =(t) =>{
-  
-    if ((this.state.items.filter(e => e.id === 5)).length >0 ) {
-      const newQty= this.state.items[t.target.id -1].qty + Math.floor(1 + (Math.random() * (100-1)))
-      console.log(newQty)
-    // 1. Make a shallow copy of the items
-    let items = [...this.state.items];
-    // 2. Make a shallow copy of the item you want to mutate
-    let item = {...items[t.target.id -1]};
-    // 3. Replace the property you're intested in
-    item.qty = newQty;
-    // 4. Put it back into our array. N.B. we *are* mutating the array here, but that's why we made a copy first
-    items[t.target.id -1] = item;
-    // 5. Set the state to our new copy
-    this.setState({items});
-  
-    }
-   else{
-    this.setState({items:[...this.state.items,{id:5,value:"Carrots",unit:"pcs",qty: Math.floor(1 + (Math.random() * (100-1)))}]})
-   }
-  }
-  addSomeBeer =(t) =>{
-  
-    if ((this.state.items.filter(e => e.id === 6)).length >0 ) {
-      const newQty= this.state.items[t.target.id -1].qty + Math.floor(1 + (Math.random() * (100-1)))
-      console.log(newQty)
-    // 1. Make a shallow copy of the items
-    let items = [...this.state.items];
-    // 2. Make a shallow copy of the item you want to mutate
-    let item = {...items[t.target.id -1]};
-    // 3. Replace the property you're intested in
-    item.qty = newQty;
-    // 4. Put it back into our array. N.B. we *are* mutating the array here, but that's why we made a copy first
-    items[t.target.id -1] = item;
-    // 5. Set the state to our new copy
-    this.setState({items});
-  
-    }
-   else{
-    this.setState({items:[...this.state.items,{id:6,value:"Beer",unit:"ltr",qty: Math.floor(1 + (Math.random() * (100-1)))}]})
-   }
-  }
- 
-  addSomeStrawberries =(t) =>{
-  
-    if ((this.state.items.filter(e => e.id === 7)).length >0 ) {
-      const newQty= this.state.items[t.target.id -1].qty + Math.floor(1 + (Math.random() * (100-1)))
-      console.log(newQty)
-    // 1. Make a shallow copy of the items
-    let items = [...this.state.items];
-    // 2. Make a shallow copy of the item you want to mutate
-    let item = {...items[t.target.id -1]};
-    // 3. Replace the property you're intested in
-    item.qty = newQty;
-    // 4. Put it back into our array. N.B. we *are* mutating the array here, but that's why we made a copy first
-    items[t.target.id -1] = item;
-    // 5. Set the state to our new copy
-    this.setState({items});
-  
-    }
-   else{
-    this.setState({items:[...this.state.items,{id:7,value:"strawberries",unit:"pcs",qty: Math.floor(1 + (Math.random() * (100-1)))}]})
-   }
-  }
- 
-  addSomeYogurt =(t) =>{
-  
-    if ((this.state.items.filter(e => e.id === 8)).length >0 ) {
-      const newQty= this.state.items[t.target.id -1].qty + Math.floor(1 + (Math.random() * (100-1)))
-      console.log(newQty)
-    // 1. Make a shallow copy of the items
-    let items = [...this.state.items];
-    // 2. Make a shallow copy of the item you want to mutate
-    let item = {...items[t.target.id -1]};
-    // 3. Replace the property you're intested in
-    item.qty = newQty;
-    // 4. Put it back into our array. N.B. we *are* mutating the array here, but that's why we made a copy first
-    items[t.target.id -1] = item;
-    // 5. Set the state to our new copy
-    this.setState({items});
-  
-    }
-   else{
-    this.setState({items:[...this.state.items,{id:8,value:"yogurt",unit:"pcs",qty: Math.floor(1 + (Math.random() * (100-1)))}]})
-   }
-  }
-  
-
+  addSomeStuff = (stuffDescription) => {
+    return () => {
+      const searchResult = this.state.items.findIndex(
+        (element) => {
+          if (element.value === stuffDescription) {
+            return true;
+          } else {
+            return false;
+          }
+        }
+      );
+      console.log(searchResult)
+      if (searchResult !== -1) {
+        let newItems = [...this.state.items];
+        newItems[searchResult].qty += Math.floor(1 + (Math.random() * (100-1)));
+        this.setState({ items: newItems });
+      } else {
+        this.setState({
+          items: [
+            ...this.state.items,
+            {
+              id: this.state.items.length + 1,
+              value: stuffDescription,
+              qty: Math.floor(1 + (Math.random() * (100-1))),
+            },
+          ],
+        });
+      }
+    };
+  };
   
   render()
   {
@@ -127,10 +67,10 @@ class App extends React.Component {
         applicationName={ applicationName }
       />
       <ShoppingList items={ this.state.items } />
-      <button onClick={ this.addSomeCarrots } name="Carrots" id="5">Carrots</button>
-      <button onClick={ this.addSomeBeer } name="beer"  id="6">Beer</button>
-      <button onClick={ this.addSomeStrawberries} name="strawberries"  id="7">strawberries</button>
-      <button onClick={ this.addSomeYogurt } name="yogurt"  id="8">yogurt</button>
+      <button onClick={ this.addSomeStuff("Carrots") }>Carrots</button>
+      <button onClick={ this.addSomeStuff("Beer") } >Beer</button>
+      <button onClick={ this.addSomeStuff("Strawberries")}>strawberries</button>
+      <button onClick={ this.addSomeStuff("Yogurt") } >yogurt</button>
 
     </div>
   }
